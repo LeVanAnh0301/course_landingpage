@@ -12,27 +12,45 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <!-- Language Switch -->
+    <div class="language-switch position-fixed top-0 end-0 m-3" style="z-index: 1000;">
+        <button onclick="switchLanguage('vi')" class="btn btn-light btn-sm me-2">VN</button>
+        <button onclick="switchLanguage('en')" class="btn btn-outline-light btn-sm">EN</button>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero-section align-items-center" style="background-color: #5680E9;">
         <div class="container">
-            <h1 class="display-4 fw-bold text-center">Computer Science Cambridge IP</h1>
-            <p class="lead text-center fs-2" style="margin-bottom: 0px;">Debugging Minds, Compiling Futures!</p>
+            <h1 class="display-4 fw-bold text-center" data-lang="vi">Khóa Học Computer Science Cambridge IP</h1>
+            <h1 class="display-4 fw-bold text-center d-none" data-lang="en">Computer Science Cambridge IP</h1>
+            <p class="lead text-center fs-2" style="margin-bottom: 0px;" data-lang="vi">Debugging Minds, Compiling Futures!</p>
+            <p class="lead text-center fs-2 d-none" style="margin-bottom: 0px;" data-lang="en">Debugging Minds, Compiling Futures!</p>
         </div>
     </section>
 
     <!-- Teacher Info Section -->
-    <section class="teacher-section " style="background-color: #84CEEB;">    
+    <section class="teacher-section" style="background-color: #84CEEB;">    
         <div class="container">
-            <h2 class="text-center">About Your Instructor</h2>
+            <h2 class="text-center" data-lang="vi">Về Giảng Viên</h2>
+            <h2 class="text-center d-none" data-lang="en">About Your Instructor</h2>
             <div class="row align-items-center">
                 <div class="col-md-4">
                     <img src="{{ url_for('static', filename='images/avatar2.jpg') }}" alt="Teacher" class="img-fluid">
                 </div>
                 <div class="col-md-8">
                     <h3>Le Thi Van Anh</h3>
-                    <p class="lead">Talent Program in Applied Mathematics and Computer Science,<br>HaNoi University of Science and Technology</p>
-                    <p>With over 4 years of teaching experience and a passion for computer science education, Van Anh has helped a lot of students achieve their academic goals.</p>
-                    <ul class="list-unstyled">
+                    <p class="lead" data-lang="vi">Chương trình Tài năng Toán học và Khoa học Máy tính,<br>Đại học Bách Khoa Hà Nội</p>
+                    <p class="lead d-none" data-lang="en">Talent Program in Applied Mathematics and Computer Science,<br>HaNoi University of Science and Technology</p>
+                    
+                    <p data-lang="vi">Với hơn 4 năm kinh nghiệm giảng dạy và niềm đam mê với giáo dục công nghệ, cô Van Anh đã giúp nhiều học sinh đạt được mục tiêu học tập của mình.</p>
+                    <p class="d-none" data-lang="en">With over 4 years of teaching experience and a passion for computer science education, Van Anh has helped a lot of students achieve their academic goals.</p>
+                    
+                    <ul class="list-unstyled" data-lang="vi">
+                        <li>✓ Giảng dạy hơn 20 lớp Khoa học Máy tính tại MindX Technology School.</li>
+                        <li>✓ Kinh nghiệm dạy IGCSE, AS và A-Level Computer Science cho học sinh từ các trường Vinschool, Brighton, BVIS...</li>
+                        <li>✓ 3 năm kinh nghiệm làm Full-Stack Developer và phát triển ứng dụng AI.</li>
+                    </ul>
+                    <ul class="list-unstyled d-none" data-lang="en">
                         <li>✓ Taught over 20 Computer Science classes at MindX Technology School.</li>
                         <li>✓ Experienced in tutoring IGCSE, AS, and A-Level Computer Science for students from schools like Vinschool, Brighton, and BVIS...</li>
                         <li>✓ 3 years of experience as a Full-Stack Developer and AI application development.</li>
@@ -45,13 +63,22 @@
     <!-- Course Info Section -->
     <section class="course-section py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Course Overview</h2>
+            <h2 class="text-center mb-5" data-lang="vi">Tổng Quan Khóa Học</h2>
+            <h2 class="text-center mb-5 d-none" data-lang="en">Course Overview</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h3>What You'll Learn</h3>
-                            <ul>
+                            <h3 data-lang="vi">Nội Dung Học</h3>
+                            <h3 class="d-none" data-lang="en">What You'll Learn</h3>
+                            <ul data-lang="vi">
+                                <li>Nền tảng lập trình</li>
+                                <li>Cấu trúc dữ liệu và giải thuật</li>
+                                <li>Kiến trúc máy tính</li>
+                                <li>Phát triển phần mềm</li>
+                                <li>Quản lý cơ sở dữ liệu</li>
+                            </ul>
+                            <ul class="d-none" data-lang="en">
                                 <li>Programming fundamentals</li>
                                 <li>Data structures and algorithms</li>
                                 <li>Computer architecture</li>
@@ -64,8 +91,16 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h3>Course Details</h3>
-                            <ul>
+                            <h3 data-lang="vi">Chi Tiết Khóa Học</h3>
+                            <h3 class="d-none" data-lang="en">Course Details</h3>
+                            <ul data-lang="vi">
+                                <li>Thời gian: 12 tuần</li>
+                                <li>Trình độ: Trung cấp</li>
+                                <li>Yêu cầu: Kiến thức lập trình cơ bản</li>
+                                <li>Hình thức: Online với lớp học trực tiếp</li>
+                                <li>Chứng chỉ: Sau khi hoàn thành</li>
+                            </ul>
+                            <ul class="d-none" data-lang="en">
                                 <li>Duration: 12 weeks</li>
                                 <li>Level: Intermediate</li>
                                 <li>Prerequisites: Basic programming knowledge</li>
@@ -76,33 +111,46 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-4">
+                <a href="{{ url_for('course_detail') }}" class="btn btn-primary btn-lg">
+                    <span data-lang="vi">Xem Chi Tiết Khóa Học</span>
+                    <span class="d-none" data-lang="en">View Course Details</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Achievements Section -->
     <section class="achievements-section py-5" style="background-color: #C1C8E4;">
         <div class="container">
-            <h2 class="text-center">Notable Achievements</h2>
-            <div class="row" stle="margin-bottom: 0px;">
+            <h2 class="text-center" data-lang="vi">Thành Tích Nổi Bật</h2>
+            <h2 class="text-center d-none" data-lang="en">Notable Achievements</h2>
+            <div class="row" style="margin-bottom: 0px;">
                 <div class="col-md-4">
                     <div class="achievement-card text-center">
                         <div class="achievement-icon">🏆</div>
-                        <h4>95% Success Rate</h4>
-                        <p>Students achieving A* grades</p>
+                        <h4 data-lang="vi">Tỷ Lệ Thành Công 95%</h4>
+                        <h4 class="d-none" data-lang="en">95% Success Rate</h4>
+                        <p data-lang="vi">Học sinh đạt điểm A*</p>
+                        <p class="d-none" data-lang="en">Students achieving A* grades</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="achievement-card text-center">
                         <div class="achievement-icon">👥</div>
-                        <h4>50+ Students</h4>
-                        <p>Successfully graduated</p>
+                        <h4 data-lang="vi">Hơn 50 Học Sinh</h4>
+                        <h4 class="d-none" data-lang="en">50+ Students</h4>
+                        <p data-lang="vi">Tốt nghiệp thành công</p>
+                        <p class="d-none" data-lang="en">Successfully graduated</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="achievement-card text-center">
                         <div class="achievement-icon">⭐</div>
-                        <h4>4.9/5 Rating</h4>
-                        <p>Student satisfaction</p>
+                        <h4>4.9/5</h4>
+                        <p data-lang="vi">Đánh giá từ học sinh</p>
+                        <p class="d-none" data-lang="en">Student satisfaction</p>
                     </div>
                 </div>
             </div>
@@ -113,7 +161,8 @@
     <section class="feedback-wrapper">
         <section class="feedback-section">
             <div class="container">
-                <h2 class="text-center mb-5"> Feedback</h2>
+                <h2 class="text-center mb-5" data-lang="vi">Phản Hồi Từ Học Sinh</h2>
+                <h2 class="text-center mb-5 d-none" data-lang="en">Student Feedback</h2>
                 <div class="feedback-container position-relative">
                     <!-- Feedback Slideshow -->
                     <div id="feedbackSlideshow" class="carousel slide" data-bs-ride="carousel">
@@ -210,7 +259,8 @@
         <div class="container">
             <div class="contact-info-container">
                 <div class="contact-info-row text-center">
-                    <h2 class="text-center mb-4">Contact</h2>
+                    <h2 class="text-center mb-4" data-lang="vi">Liên Hệ</h2>
+                    <h2 class="text-center mb-4 d-none" data-lang="en">Contact</h2>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <span>+84 982 845 575</span>
@@ -233,5 +283,29 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Language Switch Script -->
+    <script>
+        function switchLanguage(lang) {
+            // Hide all elements
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.add('d-none');
+            });
+            
+            // Show elements for selected language
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.classList.remove('d-none');
+            });
+
+            // Store the language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Set initial language based on stored preference or default to Vietnamese
+        document.addEventListener('DOMContentLoaded', function() {
+            const storedLang = localStorage.getItem('preferredLanguage') || 'vi';
+            switchLanguage(storedLang);
+        });
+    </script>
 </body>
 </html> 

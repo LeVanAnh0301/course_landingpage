@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Computer Science Course Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='course_detail.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1E88E5;">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">VỀ CHÚNG TÔI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#program">CHƯƠNG TRÌNH</a>
+                    </li>
+                </ul>
+                <div class="language-switch">
+                    <button onclick="switchLanguage('vi')" class="btn btn-light btn-sm me-2">VN</button>
+                    <button onclick="switchLanguage('en')" class="btn btn-outline-light btn-sm">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="course-hero">
+        <div class="container">
+            <h1 class="text-center mb-4" data-lang="vi">Chứng Chỉ Cambridge Computer Science</h1>
+            <h1 class="text-center mb-4 d-none" data-lang="en">Cambridge Computer Science Certificate</h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-lang="vi">Tổng Quan Về Chứng Chỉ</h2>
+            <h2 class="section-title d-none" data-lang="en">Certificate Overview</h2>
+            
+            <div class="content-box" data-lang="vi">
+                <p>Chứng chỉ Computer Science của Cambridge là một chương trình học quốc tế dành cho học sinh trung học phổ thông, gồm hai cấp độ:</p>
+                <ul>
+                    <li>Cambridge IGCSE Computer Science (O-Level) – dành cho học sinh từ lớp 9-10.</li>
+                    <li>Cambridge International AS & A-Level Computer Science – dành cho học sinh từ lớp 11-12.</li>
+                </ul>
+                <p>Chương trình này giúp học sinh phát triển tư duy lập trình, hiểu về khoa học máy tính, thuật toán, bảo mật và hệ thống máy tính.</p>
+            </div>
+
+            <div class="content-box d-none" data-lang="en">
+                <p>The Cambridge Computer Science Certificate is an international program for high school students, consisting of two levels:</p>
+                <ul>
+                    <li>Cambridge IGCSE Computer Science (O-Level) - for students in grades 9-10.</li>
+                    <li>Cambridge International AS & A-Level Computer Science - for students in grades 11-12.</li>
+                </ul>
+                <p>This program helps students develop programming thinking, understanding of computer science, algorithms, security, and computer systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title" data-lang="vi">Nội Dung Chương Trình</h2>
+            <h2 class="section-title d-none" data-lang="en">Program Content</h2>
+
+            <div class="row">
+                <!-- IGCSE Level -->
+                <div class="col-md-6 mb-4">
+                    <div class="program-card">
+                        <h3 data-lang="vi">IGCSE Computer Science (O-Level)</h3>
+                        <h3 class="d-none" data-lang="en">IGCSE Computer Science (O-Level)</h3>
+                        
+                        <div data-lang="vi">
+                            <h4>🔹 Lý thuyết Khoa học Máy tính</h4>
+                            <ul>
+                                <li>Cấu trúc máy tính, phần cứng và phần mềm</li>
+                                <li>Lưu trữ dữ liệu và hệ nhị phân</li>
+                                <li>Mạng máy tính và bảo mật</li>
+                                <li>Thuật toán và phương pháp giải quyết vấn đề</li>
+                            </ul>
+
+                            <h4>🔹 Thực hành lập trình & thuật toán</h4>
+                            <ul>
+                                <li>Lập trình với Python, Pseudocode, Flowchart</li>
+                                <li>Các cấu trúc điều khiển (if-else, loop, function)</li>
+                                <li>Xử lý file, sắp xếp và tìm kiếm dữ liệu</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-none" data-lang="en">
+                            <h4>🔹 Computer Science Theory</h4>
+                            <ul>
+                                <li>Computer architecture, hardware and software</li>
+                                <li>Data storage and binary systems</li>
+                                <li>Computer networks and security</li>
+                                <li>Algorithms and problem-solving methods</li>
+                            </ul>
+
+                            <h4>🔹 Programming & Algorithms Practice</h4>
+                            <ul>
+                                <li>Programming with Python, Pseudocode, Flowchart</li>
+                                <li>Control structures (if-else, loop, function)</li>
+                                <li>File processing, sorting and searching data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A-Level -->
+                <div class="col-md-6 mb-4">
+                    <div class="program-card">
+                        <h3>AS & A-Level Computer Science</h3>
+                        
+                        <div data-lang="vi">
+                            <h4>✔ Nội dung nâng cao</h4>
+                            <ul>
+                                <li>Phát triển thuật toán nâng cao (Stack, Queue, Linked List, Binary Tree)</li>
+                                <li>Hệ điều hành & Kiến trúc máy tính</li>
+                                <li>Trí tuệ nhân tạo & Machine Learning cơ bản</li>
+                                <li>Cơ sở dữ liệu & SQL</li>
+                                <li>Mạng & Cybersecurity</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-none" data-lang="en">
+                            <h4>✔ Advanced Content</h4>
+                            <ul>
+                                <li>Advanced algorithms (Stack, Queue, Linked List, Binary Tree)</li>
+                                <li>Operating Systems & Computer Architecture</li>
+                                <li>Basic AI & Machine Learning</li>
+                                <li>Databases & SQL</li>
+                                <li>Networks & Cybersecurity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Study Section -->
+            <div class="why-study mt-5">
+                <h2 class="section-title" data-lang="vi">Tại Sao Nên Học?</h2>
+                <h2 class="section-title d-none" data-lang="en">Why Study With Us?</h2>
+
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <div class="benefit-card">
+                            <i class="fas fa-globe-asia"></i>
+                            <h4 data-lang="vi">Công nhận toàn cầu</h4>
+                            <h4 class="d-none" data-lang="en">Global Recognition</h4>
+                            <p data-lang="vi">Được các trường đại học hàng đầu chấp nhận</p>
+                            <p class="d-none" data-lang="en">Accepted by leading universities worldwide</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="benefit-card">
+                            <i class="fas fa-brain"></i>
+                            <h4 data-lang="vi">Phát triển tư duy</h4>
+                            <h4 class="d-none" data-lang="en">Develop Thinking</h4>
+                            <p data-lang="vi">Rèn luyện tư duy lập trình và giải quyết vấn đề</p>
+                            <p class="d-none" data-lang="en">Train programming thinking and problem-solving</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="benefit-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4 data-lang="vi">Cơ hội học bổng</h4>
+                            <h4 class="d-none" data-lang="en">Scholarship Opportunities</h4>
+                            <p data-lang="vi">Lợi thế khi xin học bổng du học</p>
+                            <p class="d-none" data-lang="en">Advantage in scholarship applications</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="benefit-card">
+                            <i class="fas fa-rocket"></i>
+                            <h4 data-lang="vi">Sẵn sàng tương lai</h4>
+                            <h4 class="d-none" data-lang="en">Future Ready</h4>
+                            <p data-lang="vi">Nền tảng vững chắc cho ngành IT</p>
+                            <p class="d-none" data-lang="en">Solid foundation for IT career</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Cambridge Computer Science. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Language Switch Script -->
+    <script>
+        function switchLanguage(lang) {
+            // Hide all elements
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.add('d-none');
+            });
+            
+            // Show elements for selected language
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.classList.remove('d-none');
+            });
+        }
+    </script>
+</body>
+</html> 

@@ -479,3 +479,32 @@ footer {
     color: white;
     font-size: 18px;
 }
+
+.btn-primary {
+    background: linear-gradient(135deg, #1E88E5 0%, #64B5F6 100%);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
+    background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+    border-radius: 50px;
+}
+
+.btn-primary .fas {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .fas {
+    transform: translateX(5px);
+}

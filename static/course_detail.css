@@ -1,0 +1,147 @@
+/* Course Hero Section */
+.course-hero {
+    background: linear-gradient(135deg, #1E88E5 0%, #64B5F6 100%);
+    padding: 60px 0;
+    color: white;
+}
+
+.course-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-title {
+    color: #1E88E5;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Content Box */
+.content-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.content-box ul {
+    padding-left: 20px;
+}
+
+.content-box li {
+    margin-bottom: 10px;
+}
+
+/* Program Cards */
+.program-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-card h3 {
+    color: #1E88E5;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.program-card h4 {
+    color: #2196F3;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.program-card ul {
+    padding-left: 20px;
+}
+
+.program-card li {
+    margin-bottom: 10px;
+}
+
+/* Benefit Cards */
+.benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: #1E88E5;
+    margin-bottom: 20px;
+}
+
+.benefit-card h4 {
+    color: #1E88E5;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Language Switch */
+.language-switch {
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .program-card, .benefit-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Navigation */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 10px 15px !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #E3F2FD !important;
+} 
