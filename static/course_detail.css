@@ -144,4 +144,28 @@
 
 .nav-link:hover {
     color: #E3F2FD !important;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    background-color: #f8f9fa;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #1E88E5;
+    margin-bottom: 1rem;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
 } 
